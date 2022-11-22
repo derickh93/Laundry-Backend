@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer_Name": {
+      "type": "string",
+      "required": true
+    },
+    "pickup_Address": {
+      "type": "text",
+      "required": true
+    },
+    "laundryBag_Count": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "dryClean_Count": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "preferences": {
+      "type": "text",
+      "required": true
+    },
+    "pickup_Time": {
+      "type": "string"
+    },
+    "pickup_Date": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "order received",
+        "picked up",
+        "washing",
+        "drying",
+        "out for delivery",
+        "delivered"
+      ],
+      "required": false,
+      "default": "order received"
+    },
+    "customer_id": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "bulky_Count": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    }
+  }
+}
